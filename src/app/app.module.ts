@@ -15,7 +15,6 @@ import { WidgetSideComponent } from './widget-side/widget-side.component';
 import { WidgetCategoriesComponent } from './widget-categories/widget-categories.component';
 import { WidgetSearchComponent } from './widget-search/widget-search.component';
 import { BlogSummaryComponent } from './blog-summary/blog-summary.component';
-import { ControlBlogSummaryComponent } from './control-blog-summary/control-blog-summary.component';
 import { ControlPaginationComponent } from './control-pagination/control-pagination.component';
 import { BlogService } from './blog.service';
 
@@ -34,7 +33,6 @@ import { BlogService } from './blog.service';
     WidgetCategoriesComponent,
     WidgetSearchComponent,
     BlogSummaryComponent,
-    ControlBlogSummaryComponent,
     ControlPaginationComponent
   ],
   imports: [
