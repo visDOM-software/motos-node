@@ -7,7 +7,7 @@ import { BlogComponent } from './blog/blog.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
-import { MotorcycleComponent } from './motorcycle/motorcycle.component';
+import { MotorcycleCompareComponent } from './motorcycle-compare/motorcycle-compare.component';
 import { AuthGuardGuardGuard } from './auth-guard-guard.guard'
 import { BlogFormComponent } from './blog-form/blog-form.component'
 import { BlogListComponent } from './blog-list/blog-list.component'
@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: "login", component: LoginComponent },
   { path: "home", component: HomeComponent },
   { path: "user", component: UserComponent, canActivate: [AuthGuardGuardGuard] },
-  { path: "moto", component: MotorcycleComponent }
+  { path: "moto", component: MotorcycleCompareComponent }
 ];
 
 @NgModule({

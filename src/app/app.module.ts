@@ -11,7 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { GroupComponent } from './group/group.component';
-import { MotorcycleComponent } from './motorcycle/motorcycle.component';
 import { BlogComponent } from './blog/blog.component';
 import { FooterComponent } from './footer/footer.component';
 import { WidgetSideComponent } from './widget-side/widget-side.component';
@@ -22,7 +21,9 @@ import { ControlPaginationComponent } from './control-pagination/control-paginat
 import { BlogService } from './blog.service';
 import { AuthGuardGuardGuard } from './auth-guard-guard.guard';
 import { BlogFormComponent } from './blog-form/blog-form.component';
-import { BlogListComponent } from './blog-list/blog-list.component'
+import { BlogListComponent } from './blog-list/blog-list.component';
+import { MotorcycleCompareComponent } from './motorcycle-compare/motorcycle-compare.component'
+import { MotorcycleService } from './motorcycle.service';
 
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
@@ -49,7 +50,6 @@ export function getAuthServiceConfigs() {
     LoginComponent,
     UserComponent,
     GroupComponent,
-    MotorcycleComponent,
     BlogComponent,
     FooterComponent,
     WidgetSideComponent,
@@ -58,7 +58,8 @@ export function getAuthServiceConfigs() {
     BlogSummaryComponent,
     ControlPaginationComponent,
     BlogFormComponent,
-    BlogListComponent
+    BlogListComponent,
+    MotorcycleCompareComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +74,8 @@ export function getAuthServiceConfigs() {
       provide: AuthServiceConfig,
       useFactory: getAuthServiceConfigs
     },
-    AuthGuardGuardGuard
+    AuthGuardGuardGuard,
+    MotorcycleService
   ],
   bootstrap: [AppComponent]
 })
