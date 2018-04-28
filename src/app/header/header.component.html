@@ -6,15 +6,11 @@
     <nav id="main-nav">
         <ul>
             <li class="current">
-                <a class="nav-link" routerLink="moto" data-description="All starts here">Motocicleta</a>
-                <ul>
-                    <li>
-                        <a href="logos-slider.html">Logos Slider</a>
-                    </li>
-                    <li>
-                        <a href="photos-slider.html">Photos Slider</a>
-                    </li>
-                </ul>
+                <a class="nav-link" routerLink="moto" data-description="All starts here">Comparativa</a>
+                <!-- <ul>
+                    <li><a href="logos-slider.html">Logos Slider</a></li>
+                    <li><a href="photos-slider.html">Photos Slider</a></li>
+                </ul> -->
             </li>
             <!-- <li>
                 <a class="nav-link" routerLink="user" data-description="All the different stuff">Usuario</a>
@@ -51,11 +47,21 @@
             <div *ngIf="authorized;then logged else not_logged"></div>
             <ng-template #logged>
                 <li>
-                    <a class="nav-link" routerLink="login" data-description="Enquire here">{{ user.name }}</a>
+                    <a class="nav-link" routerLink="blog" data-description="Sal con tus amigos">Rodadas</a>
                     <ul>
-                        <li>
-                            <a class="nav-link" routerLink="user">Usuario</a>
-                        </li>
+                        <li><a class="nav-link" routerLink="user">Mis rodadas</a></li>
+                        <li><a class="nav-link" routerLink="user">Buscar acompañante</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="nav-link" routerLink="login">{{ user.name }}
+                            <i><img class="icon-user" src="{{ user.image }}"></i>
+                        </a>
+                    <ul>
+                        <li><a class="nav-link" routerLink="user">Usuario</a></li>
+                        <li><a class="nav-link" routerLink="user">Mis motos</a></li>
+                        <li><a class="nav-link" routerLink="user">Mis gastos</a></li>
+                        <li><a class="nav-link" (click)="signOut()">Cerrar sesión</a></li>
                     </ul>
                 </li>
             </ng-template>

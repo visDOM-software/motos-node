@@ -8,11 +8,11 @@ import { AuthService, FacebookLoginProvider, GoogleLoginProvider, SocialUser } f
 })
 export class LoginComponent implements OnInit {
 
-  private user: SocialUser;
+  public user: SocialUser;
   public authorized: boolean = false;
 
-  constructor(private socialAuthService: AuthService) { 
-    socialAuthService.authState.subscribe(user =>{
+  constructor(private socialAuthService: AuthService) {
+    socialAuthService.authState.subscribe(user => {
       this.authorized = (user != null);
       this.user = user;
     });
@@ -20,9 +20,9 @@ export class LoginComponent implements OnInit {
 
   public socialSignIn(socialPlatform: string) {
     let socialPlatformProvider;
-    if (socialPlatform == "facebook") {
+    if (socialPlatform === 'facebook') {
       socialPlatformProvider = FacebookLoginProvider.PROVIDER_ID;
-    } else if (socialPlatform == "google") {
+    } else if (socialPlatform === 'google') {
       socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
     }
 

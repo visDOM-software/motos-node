@@ -1,8 +1,8 @@
-<ul>
-  <li *ngFor="let blog of blogs">
+<ul class="list-group">
+  <li *ngFor="let blog of blogs" class="list-group-item">
     <a [routerLink]="['/blog/edit', blog.id]">
-      {{blog.title}}
+      <h4 class="list-group-item-heading">{{blog.title}}</h4>
+      <p class="list-group-item-text">{{blog.summary}}</p>
     </a>
-    {{blog.summary}}
   </li>
 </ul>
