@@ -42,7 +42,9 @@
             <div *ngIf="authorized;then logged else not_logged"></div>
             <ng-template #logged>
                 <li>
-                    <a class="nav-link" routerLink="login" data-description="Enquire here">{{ user.name }}</a>
+                    <a class="nav-link" routerLink="login" data-description="Enquire here">{{ user.name }}
+                            <i><img class="img img-responsive img-circle" src="{{ user.image }}"></i>
+                    </a>
                     <ul>
                         <li><a class="nav-link" routerLink="user">Usuario</a></li>
                     </ul>
