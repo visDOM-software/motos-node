@@ -39,15 +39,21 @@
                     <li><a href="single-post.html">Single Post</a></li>
                 </ul>
             </li>
-            <li *ngIf="authorized;else not_logged">
-                <a class="nav-link" routerLink="login" data-description="Enquire here">{{ user.name }}</a>
-                <ul>
-                    <li><a class="nav-link" routerLink="user">Usuario</a></li>
-                </ul>
-            </li>
-            <li ng-template #not_logged>
-                <a class="nav-link" routerLink="login" data-description="Enquire here">Login</a>
-            </li>
+            <div *ngIf="authorized;then logged else not_logged"></div>
+
+            <ng-template #logged>
+                <li>
+                    <a class="nav-link" routerLink="login" data-description="Enquire here">{{ user.name }}</a>
+                    <ul>
+                        <li><a class="nav-link" routerLink="user">Usuario</a></li>
+                    </ul>
+                </li>
+            </ng-template>
+            <ng-template #not_logged>
+                <li>
+                    <a class="nav-link" routerLink="login" data-description="Enquire here">Login</a>
+                </li>
+            </ng-template>
         </ul>
     </nav>
     <!-- end #main-nav -->
