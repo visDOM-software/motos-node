@@ -12,8 +12,15 @@ export class MotorcycleService {
 
   constructor() { }
 
-  getBrands(){
-    console.log(this.motorcycles);
-    return this.motorcycles.map(x => x.brand);
+  getBrands() {
+    return Array.from(new Set(this.motorcycles.map(x => x.brand)));
+  }
+
+  getModels(brand) {
+    return Array.from(new Set(this.motorcycles.filter(x => x.brand == brand).map(x => ({ model: x.model, id: x.id }))));
+  }
+
+  getMoto(id) {
+    return this.motorcycles.find(x => x.id == id);
   }
 }
