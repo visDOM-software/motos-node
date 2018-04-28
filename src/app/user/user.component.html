@@ -1,6 +1,6 @@
 <div class="container">
   <h1>Usuario</h1>
-  <form #User="ngForm" (ngSubmit)="save()">
+  <form #UserForm="ngForm" (ngSubmit)="save()">
     <div class="form-group">
       <label for="name">Email</label>
       <input [(ngModel)]="model.email" name="email" type="text" class="form-control" #name="ngModel" id="name" required>
@@ -16,7 +16,6 @@
       <input [(ngModel)]="model.photo" name="photo" type="text" class="form-control" id="alterEgo">
     </div>
 
-    <button [disabled]="!User.form.valid" class="btn btn-success">Submit</button>
-
+    <button [disabled]="!UserForm.form.valid" class="btn btn-success">Submit</button>
   </form>
 </div>
