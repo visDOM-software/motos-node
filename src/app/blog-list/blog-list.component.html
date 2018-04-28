@@ -1,0 +1,8 @@
+<ul>
+  <li *ngFor="let blog of blogs">
+    <a [routerLink]="['/blog/edit', blog.id]">
+      {{blog.title}}
+    </a>
+    {{blog.summary}}
+  </li>
+</ul>

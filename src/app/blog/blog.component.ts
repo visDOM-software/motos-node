@@ -10,15 +10,15 @@ import { BlogService } from '../blog.service';
 })
 export class BlogComponent implements OnInit {
   blog: Blog;
-  name: string;
+  id: number;
 
   constructor(private route: ActivatedRoute,
     private blogService: BlogService) {
-    this.route.params.subscribe(params => this.name = params['name']);
+    this.route.params.subscribe(params => this.id = +params['id']);
   }
 
   ngOnInit() {
-    this.blog = this.blogService.getBlog(this.name);
+    this.blog = this.blogService.getBlog(this.id);
   }
 
 }

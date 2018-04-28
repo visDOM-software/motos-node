@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Blog } from './../../model/blog';
+import { ActivatedRoute } from "@angular/router";
+import { Blog } from "./../../model/blog";
+import { BlogService } from '../blog.service';
 
 @Component({
   selector: 'app-blog-form',
@@ -7,9 +9,19 @@ import { Blog } from './../../model/blog';
   styleUrls: ['./blog-form.component.css']
 })
 export class BlogFormComponent implements OnInit {
-  model: Blog = { text: "<h1>asjkdhajskdhjakshdjkashd<h1>", summary:"asdjahskjd" };
+  model: Blog;
+  id: number;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private blogService: BlogService) {
+    this.route.params.subscribe(params => this.id = +params['id']);
+
+    if (isNaN(this.id)) {
+      this.model = new Blog();
+    }
+    else {
+      this.model = this.blogService.getBlog(this.id);
+    }
+  }
 
   ngOnInit() {
   }

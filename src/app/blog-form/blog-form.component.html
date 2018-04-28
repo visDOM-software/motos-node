@@ -9,7 +9,7 @@
       <div class="form-group">
 
           <label for="name">Content</label>
-          <md-editor name="Content" [preRender]="preRenderFunc" [(ngModel)]="model.text" [height]="'200px'" [mode]="mode" [options]="options" maxlength="500"></md-editor>
+          <md-editor name="Content" [preRender]="preRenderFunc" [(ngModel)]="model.content" [height]="'200px'" [mode]="mode" [options]="options" maxlength="500"></md-editor>
         </div>
   
       <button [disabled]="!UserForm.form.valid" class="btn btn-success">Submit</button>
