@@ -8,7 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { MotorcycleComponent } from './motorcycle/motorcycle.component';
-
+import { AuthGuardGuardGuard } from './auth-guard-guard.guard'
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -17,7 +17,7 @@ const routes: Routes = [
   { path: "blog/:name", component: BlogComponent },
   { path: "login", component: LoginComponent },
   { path: "home", component: HomeComponent },
-  { path: "user", component: UserComponent },
+  { path: "user", component: UserComponent, canActivate: [AuthGuardGuardGuard] },
   { path: "moto", component: MotorcycleComponent }
 ];
 
