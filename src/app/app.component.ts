@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService, FacebookLoginProvider, GoogleLoginProvider, SocialUser } from 'angular5-social-login';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  private user: SocialUser;
+  public authorized: boolean = false;
+
+  constructor(private socialAuthService: AuthService) { 
+    socialAuthService.authState.subscribe(user =>{
+      this.authorized = (user != null);
+      this.user = user;
+    });
+  }
 }
