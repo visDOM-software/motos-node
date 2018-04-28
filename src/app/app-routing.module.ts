@@ -11,7 +11,7 @@ import { MotorcycleComponent } from './motorcycle/motorcycle.component';
 
 
 const routes: Routes = [
-  { path: "", component: AppComponent },
+  { path: "", component: HomeComponent },
   { path: "index", component: AppComponent },
   { path: "blog", component: BlogSummaryComponent },
   { path: "blog/:name", component: BlogComponent },
