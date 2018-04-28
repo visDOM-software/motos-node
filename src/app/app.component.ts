@@ -9,11 +9,11 @@ import { AuthService, FacebookLoginProvider, GoogleLoginProvider, SocialUser } f
 export class AppComponent {
   title = 'app';
 
-  private user: SocialUser;
+  public user: SocialUser;
   public authorized: boolean = false;
 
-  constructor(private socialAuthService: AuthService) { 
-    socialAuthService.authState.subscribe(user =>{
+  constructor(private socialAuthService: AuthService) {
+    socialAuthService.authState.subscribe(user => {
       this.authorized = (user != null);
       this.user = user;
     });
