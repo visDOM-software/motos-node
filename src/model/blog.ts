@@ -3,7 +3,7 @@ export class Blog {
     title?: string;
     summary?: string;
     img?: string;
-    text?: string;
+    content?: string;
     datePosted?: string;
     author?:string;
 }

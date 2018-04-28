@@ -21,7 +21,8 @@ import { BlogSummaryComponent } from './blog-summary/blog-summary.component';
 import { ControlPaginationComponent } from './control-pagination/control-pagination.component';
 import { BlogService } from './blog.service';
 import { AuthGuardGuardGuard } from './auth-guard-guard.guard';
-import { BlogFormComponent } from './blog-form/blog-form.component'
+import { BlogFormComponent } from './blog-form/blog-form.component';
+import { BlogListComponent } from './blog-list/blog-list.component'
 
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
@@ -56,7 +57,8 @@ export function getAuthServiceConfigs() {
     WidgetSearchComponent,
     BlogSummaryComponent,
     ControlPaginationComponent,
-    BlogFormComponent
+    BlogFormComponent,
+    BlogListComponent
   ],
   imports: [
     BrowserModule,

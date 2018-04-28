@@ -36,7 +36,12 @@
             <li>
                 <a class="nav-link" routerLink="blog" data-description="What we think">Blog</a>
                 <ul>
-                    <li><a routerLink="/blog/edit">Editar</a></li>
+                    <li>
+                        <a routerLink="/blog/mine">Mis blogs</a>
+                    </li>
+                    <li>
+                        <a routerLink="/blog/edit">Crear</a>
+                    </li>
                 </ul>
             </li>
             <div *ngIf="authorized;then logged else not_logged"></div>

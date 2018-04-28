@@ -10,11 +10,14 @@ import { UserComponent } from './user/user.component';
 import { MotorcycleComponent } from './motorcycle/motorcycle.component';
 import { AuthGuardGuardGuard } from './auth-guard-guard.guard'
 import { BlogFormComponent } from './blog-form/blog-form.component'
+import { BlogListComponent } from './blog-list/blog-list.component'
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "index", component: AppComponent },
   { path: "blog/edit", component: BlogFormComponent },
+  { path: "blog/edit/:id", component: BlogFormComponent },
+  { path: "blog/mine", component:BlogListComponent },
   { path: "blog", component: BlogSummaryComponent },
   { path: "blog/:name", component: BlogComponent },
   { path: "login", component: LoginComponent },

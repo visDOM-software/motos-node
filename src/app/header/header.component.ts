@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService, FacebookLoginProvider, GoogleLoginProvider, SocialUser } from 'angular5-social-login';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,8 @@ export class HeaderComponent {
   public user: SocialUser;
   public authorized: boolean = false;
 
-  constructor(private socialAuthService: AuthService) {
+  constructor(private socialAuthService: AuthService,
+    private router: Router) {
     socialAuthService.authState.subscribe(user => {
       this.authorized = (user != null);
       this.user = user;
@@ -19,6 +21,6 @@ export class HeaderComponent {
   }
   public signOut() {
     this.socialAuthService.signOut();
+    this.router.navigate(['']);
   }
-
 }

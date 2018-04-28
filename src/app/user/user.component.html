@@ -1,21 +1,29 @@
 <div class="container">
   <h1>Usuario</h1>
-  <form #UserForm="ngForm" (ngSubmit)="save()">
-    <div class="form-group">
-      <label for="name">Email</label>
-      <input [(ngModel)]="model.email" name="email" type="text" class="form-control" #name="ngModel" id="name" required>
-    </div>
 
-    <div class="form-group">
-      <label for="alterEgo">Name</label>
-      <input [(ngModel)]="model.name" name="name" type="text" class="form-control" id="alterEgo">
-    </div>
+  <div class="row">
+    <div class="col-md-6 col-xs-12">
+      <form #UserForm="ngForm" (ngSubmit)="save()">
+        <div class="form-group">
+          <label for="name">Email</label>
+          <input [(ngModel)]="model.email" name="email" type="text" class="form-control" #name="ngModel" id="name" required>
+        </div>
 
-    <div class="form-group">
-      <label for="alterEgo">ProtoUrl</label>
-      <input [(ngModel)]="model.photo" name="photo" type="text" class="form-control" id="alterEgo">
-    </div>
+        <div class="form-group">
+          <label for="alterEgo">Name</label>
+          <input [(ngModel)]="model.name" name="name" type="text" class="form-control" id="alterEgo">
+        </div>
 
-    <button [disabled]="!UserForm.form.valid" class="btn btn-success">Submit</button>
-  </form>
+        <div class="form-group">
+          <label for="alterEgo">ProtoUrl</label>
+          <input [(ngModel)]="model.photo" name="photo" type="text" class="form-control" id="alterEgo">
+        </div>
+
+        <button [disabled]="!UserForm.form.valid" class="btn btn-success">Submit</button>
+      </form>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <img src="{{user.image}}" alt="" id="src">
+    </div>
+  </div>
 </div>
