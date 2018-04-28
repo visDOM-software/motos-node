@@ -13,7 +13,6 @@ export class AuthGuardGuardGuard implements CanActivate {
 
     let isLoggued = false;
     this.socialAuthService.authState.subscribe(user => {
-      console.log(user);
       isLoggued = (user !== null);
     });
 
