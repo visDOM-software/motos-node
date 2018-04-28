@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, } from "angular5-social-login";
 import { FormsModule } from '@angular/forms';
+import { LMarkdownEditorModule } from 'ngx-markdown-editor';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -19,7 +20,8 @@ import { WidgetSearchComponent } from './widget-search/widget-search.component';
 import { BlogSummaryComponent } from './blog-summary/blog-summary.component';
 import { ControlPaginationComponent } from './control-pagination/control-pagination.component';
 import { BlogService } from './blog.service';
-import { AuthGuardGuardGuard } from './auth-guard-guard.guard'
+import { AuthGuardGuardGuard } from './auth-guard-guard.guard';
+import { BlogFormComponent } from './blog-form/blog-form.component'
 
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
@@ -53,13 +55,15 @@ export function getAuthServiceConfigs() {
     WidgetCategoriesComponent,
     WidgetSearchComponent,
     BlogSummaryComponent,
-    ControlPaginationComponent
+    ControlPaginationComponent,
+    BlogFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    SocialLoginModule
+    SocialLoginModule,
+    LMarkdownEditorModule
   ],
   providers: [
     BlogService,
