@@ -8,7 +8,7 @@ import { AuthService, FacebookLoginProvider, GoogleLoginProvider, SocialUser } f
 })
 
 export class HeaderComponent {
-  private user: SocialUser;
+  public user: SocialUser;
   public authorized: boolean = false;
 
   constructor(private socialAuthService: AuthService) {
@@ -16,6 +16,9 @@ export class HeaderComponent {
       this.authorized = (user != null);
       this.user = user;
     });
+  }
+  public signOut() {
+    this.socialAuthService.signOut();
   }
 
 }

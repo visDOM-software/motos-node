@@ -984,6 +984,7 @@ textarea.placeholder {
     text-align: center;
     text-transform: uppercase;
     z-index: 98;
+    text-decoration: none;
 }
 
 .ie7 #main-nav a {
