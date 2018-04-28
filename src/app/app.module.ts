@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, } from "angular5-social-login";
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -26,20 +27,16 @@ export function getAuthServiceConfigs() {
       {
         id: GoogleLoginProvider.PROVIDER_ID,
         provider: new GoogleLoginProvider("732796863746-15jhvtn8ft7n4nj7pm15u15kqfhlv16t.apps.googleusercontent.com")
+      },
+      {
+        id: FacebookLoginProvider.PROVIDER_ID,
+        provider: new FacebookLoginProvider("149404765721242")
+
       }
     ]
   );
   return config;
 }
-
-/*
-,
-{
-  id: FacebookLoginProvider.PROVIDER_ID,
-        provider: new FacebookLoginProvider("Your-Facebook-app-id")
-  
-},
-*/
 
 @NgModule({
   declarations: [
@@ -60,6 +57,7 @@ export function getAuthServiceConfigs() {
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     SocialLoginModule
   ],
