@@ -11,7 +11,7 @@ export class MotorcycleCompareComponent implements OnInit {
 
   brands: any[] = null;
   models: any[] = null;
-  moto: Motorcycle = null;
+  moto = null;
 
   constructor(private motorcycleService: MotorcycleService) { }
 

@@ -1,0 +1,442 @@
+/* Latop Device :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+.container {
+	max-width: 1200px;
+}
+.single-slider {
+	min-height: 800px;
+}
+.single-slider.home-2 .slider-content {
+	padding-top: 270px;
+}
+.slider-search-form {
+	bottom: 145px;
+}
+.slider-search-form .form-action ul.select-bar li.location {
+	width: 15%;
+}
+
+
+}
+
+/* LG Device :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+.basic-menu ul li {
+	margin-left: 25px;
+}
+.service-home-content {
+	padding-left: 0;
+}
+.service-home-content ul li {
+	font-size: 14px;
+}
+.video-home {
+	padding-top: 180px;
+	padding-bottom: 180px;
+}
+.destination-content {
+	padding-left: 0px;
+	padding-right: 0;
+}
+.destination-content ul li {
+	font-size: 14px;
+}
+.popular-p-pricing {
+	display: none;
+}
+.pp-list-item {
+	padding-right: 0;
+}
+.pp-list-item-right {
+	padding-left: 0;
+}
+.single-blog-content h4 {
+	padding-right: 0;
+	font-size: 15px;
+}
+.form-action {
+	padding: 48px 40px;
+}
+.service-home-img > img {
+	width: 100%;
+	margin-left: -37px;
+}
+.single-slider {
+	min-height: 770px;
+}
+.single-slider.home-2 .slider-content {
+	padding-top: 270px;
+}
+.slider-search-form {
+	bottom: 145px;
+}
+.slider-search-form .form-action ul.select-bar li.location {
+	width: 15%;
+}
+.slider-search-form .trip-btn.btn-1 {
+	padding: 11.4px 30px;
+}
+.single-blog-info {
+	padding: 48px 28px 30px;
+}
+.comment-content {
+	padding-right: 0;
+}
+.blog-sidebar {
+	padding-left: 15px;
+}
+
+}
+
+
+/* MD Device :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.main-menu {
+	padding: 40px 0;
+	padding-bottom: 27px;
+}
+.header-social-icon ul li {
+	margin-right: 10px;
+}
+.single-slider {
+	min-height: 500px;
+}
+.slider-content {
+	padding-top: 125px;
+}
+.booking-area {
+	margin-top: 100px;
+}
+.booking-option {
+	margin-top: 0;
+}
+.form-action {
+	padding: 40px 40px;
+}
+.booking-option ul li.location {
+	width: 33.33%;
+	margin-bottom: 10px;
+}
+.range-wrapper {
+	float: none;
+}
+.filter-button {
+	float: none;
+	margin-top: 29px;
+}
+.single-feature-item {
+	text-align: center;
+}
+.feature-content {
+	padding-left: 0;
+	margin-top: 20px;
+}
+.service-home-content {
+	padding-left: 0;
+	padding-top: 30px;
+}
+.video-home {
+	padding-top: 170px;
+	padding-bottom: 170px;
+}
+.destination-content {
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 40px;
+}
+.pp-list-item-right {
+	padding-left: 0;
+}
+.promote-content.text-center > h2 {
+	font-size: 30px;
+}
+.pp-list-item {
+	padding-right: 0;
+}
+.menu-trans.mean-container a.meanmenu-reveal {
+	border: 1px solid #fff;
+	color: #fff;
+}
+.menu-trans.mean-container a.meanmenu-reveal span {
+	background: #fff;
+}
+header.header-area.home-2 {
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+	position: absolute;
+	padding: 30px 0;
+}
+.slider-search-form .form-action ul.select-bar li.location {
+	display: inline;
+	width: 47%;
+	background: none;
+	color: #fff;
+	margin-right: 15px;
+	float: left;
+	margin-bottom: 10px;
+}
+.slider-search-form .form-action ul.select-bar li.location.search-width {
+	width: 36%;
+}
+.single-slider.home-2 .slider-content {
+	padding-top: 200px;
+}
+.slider-content h1 {
+	font-size: 36px;
+}
+.single-slider.home-2 h4 {
+	font-size: 20px;
+}
+.slider-search-form {
+	display: none;
+}
+.faq-area {
+	margin-top: 50px;
+}
+.testimonial-area {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.single-blog-info {
+	padding: 48px 28px 30px;
+}
+.comment-content {
+	padding-right: 0;
+}
+.blog-sidebar {
+	padding-left: 15px;
+}
+#contact-map{height:600px;}
+.advertise-area img {
+	width: inherit;
+}
+.md-space{margin-bottom: 50px;}
+.slider-thumb .slider-btn-info {
+	bottom: 50px;
+}
+
+}
+
+
+/* Extra small Device. */
+@media (max-width: 767px) {
+.main-menu {
+	padding: 40px 0;
+	padding-bottom: 27px;
+}
+.single-slider {
+	min-height: 500px;
+}
+.slider-content {
+	padding-top: 100px;
+}
+.booking-area {
+	margin-top: 100px;
+}
+.booking-option {
+	margin-top: 0;
+}
+.slider-content h1 {
+	font-size: 31px;
+}
+.form-action {
+	padding: 30px;
+}
+.booking-option ul li.location {
+	width: 100%;
+	margin-bottom: 10px;
+}
+.filter-button {
+	float: none;
+}
+.range-wrapper {
+	float: none;
+	margin-bottom: 20px;
+}
+.range-input {
+	margin-left: 0;
+	float: left;
+}
+.top-button.s-btn {
+	border: 1px solid #ddd;
+	margin-bottom: 10px;
+}
+.single-feature-item {
+	text-align: center;
+	margin-bottom: 30px;
+}
+.feature-content {
+	padding-left: 0;
+	margin-top: 20px;
+}
+.service-home-img > img {
+	width: 100%;
+	margin-left: 0;
+}
+.service-home-content {
+	padding-left: 0;
+	padding-top: 20px;
+}
+.service-home-content ul li {
+	width: 100%;
+}
+.video-home {
+	padding-top: 150px;
+	padding-bottom: 150px;
+}
+.des-feature li {
+	width: 100%;
+}
+.destination-content {
+	padding-left: 0;
+	padding-right: 0;
+	margin-bottom: 40px;
+}
+.section-title h2 {
+	font-size: 32px;
+}
+.separator.pt-115.pb-110 {
+	padding-bottom: 80px;
+}
+.pp-list-item {
+	padding-right: 0;
+}
+.popular-p-pricing {
+	display: none;
+}
+.popular-pp-info {
+	padding-bottom: 20px;
+}
+.single-pp-thumb {
+	display: none;
+}
+.pp-list-item-right {
+	padding-left: 0;
+}
+.btn-1 {
+	font-size: 15px;
+}
+.single-blog-content h4 {
+	padding-right: 0;
+}
+.menu-trans .mean-container a.meanmenu-reveal {
+	border: 1px solid #fff;
+}
+.menu-trans .mean-container a.meanmenu-reveal span {
+	background: #fff;
+}
+header.header-area.home-2 {
+	padding: 30px 0;
+}
+.slider-search-form {
+	display: none;
+}
+.single-slider.home-2 .slider-content {
+	padding-top: 150px;
+}
+.slider-content h1 {
+	font-size: 36px;
+}
+.single-slider.home-2 h4 {
+	font-size: 20px;
+}
+.menu-trans.mean-container a.meanmenu-reveal {
+	border: 1px solid #fff;
+}
+.menu-trans.mean-container a.meanmenu-reveal span {
+	background: #fff;
+}
+.section-title p {
+	padding: 0 0px;
+}
+.video-box {
+	padding: 0 0px;
+}
+.faq-area {
+	margin-top: 50px;
+}
+.testimonial-area {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.facts-area {
+	padding-top: 170px;
+}
+.card-body {
+	padding: 14px 20px 22px 20px;
+}
+.btn.faq {
+	padding: 0 0 0 42px;
+}
+.promote-content.text-center > h2 {
+	font-size: 22px;
+}
+.promote-content.text-center > h4 {
+	padding-bottom: 35px;
+	font-size: 15px;
+}
+.testimonial-single-item {
+	padding-right: 0;
+}
+.breadcrumb-area {
+	padding: 120px 0;
+}
+.single-blog-info {
+	padding: 40px 30px 30px;
+}
+.comment-content {
+	padding-right: 0;
+}
+blockquote {
+	padding: 0 20px;
+}
+.blog-sidebar {
+	padding-left: 15px;
+}
+.package-search-result {
+	float: left;
+}
+.package-search.f-left {
+	float: none;
+	margin-bottom: 30px;
+}
+.pack-content {
+	overflow: visible;
+	padding-right: 0px;
+	padding: 30px 0;
+}
+.package-img.p-list {
+	float: none;
+	padding-right: 0;
+}
+
+
+
+
+}
+
+/* SM Small Device :550px. */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+.single-slider {
+	min-height: 400px;
+}
+.top-button.s-btn {
+	border: 0;
+	margin-bottom: 0;
+}
+.range-input {
+	margin-left: 0;
+	float: left;
+}
+.single-slider.home-2 .slider-content {
+	padding-top: 175px;
+}
+.sidebar-booking .range-input {
+	margin-top: 4px;
+}
+
+
+
+}
