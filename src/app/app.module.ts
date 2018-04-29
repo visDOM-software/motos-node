@@ -24,6 +24,8 @@ import { BlogFormComponent } from './blog-form/blog-form.component';
 import { BlogListComponent } from './blog-list/blog-list.component';
 import { MotorcycleCompareComponent } from './motorcycle-compare/motorcycle-compare.component'
 import { MotorcycleService } from './motorcycle.service';
+import { Page401Component } from './page-401/page-401.component';
+import { Page404Component } from './page-404/page-404.component';
 
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
@@ -59,7 +61,9 @@ export function getAuthServiceConfigs() {
     ControlPaginationComponent,
     BlogFormComponent,
     BlogListComponent,
-    MotorcycleCompareComponent
+    MotorcycleCompareComponent,
+    Page401Component,
+    Page404Component
   ],
   imports: [
     BrowserModule,

@@ -11,19 +11,21 @@ import { MotorcycleCompareComponent } from './motorcycle-compare/motorcycle-comp
 import { AuthGuardGuardGuard } from './auth-guard-guard.guard'
 import { BlogFormComponent } from './blog-form/blog-form.component'
 import { BlogListComponent } from './blog-list/blog-list.component'
+import { Page404Component } from './page-404/page-404.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "index", component: AppComponent },
   { path: "blog/edit", component: BlogFormComponent },
   { path: "blog/edit/:id", component: BlogFormComponent },
+  { path: "blog/:id", component: BlogComponent },
   { path: "blog/mine", component:BlogListComponent },
   { path: "blog", component: BlogSummaryComponent },
-  { path: "blog/:name", component: BlogComponent },
   { path: "login", component: LoginComponent },
   { path: "home", component: HomeComponent },
   { path: "user", component: UserComponent, canActivate: [AuthGuardGuardGuard] },
-  { path: "moto", component: MotorcycleCompareComponent }
+  { path: "compare-moto", component: MotorcycleCompareComponent },
+  { path: "**", component: Page404Component }
 ];
 
 @NgModule({

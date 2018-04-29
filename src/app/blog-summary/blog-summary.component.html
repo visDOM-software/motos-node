@@ -1,11 +1,28 @@
-<h1 class="my-4">Page Heading
-    <small>Secondary Text</small>
-</h1>
+<h1>Blogs</h1>
 
+<section id="portfolio-items" class="clearfix">
+
+    <article *ngFor="let blog of blogs" class="one-fourth" data-categories="illustration design">
+
+        <a [routerLink]="['/blog', blog.id]" class="single-image" title="Altered - Something abstract.">
+            <img src="https://via.placeholder.com/220x140" alt="">
+        </a>
+
+        <a href="single-project.html" class="project-meta">
+            <h5 class="title">{{blog.title}}</h5>
+            <span class="categories">{{blog.summary}}</span>
+        </a>
+
+    </article>
+
+</section>
+<!-- end .one-fourth (Altered) -->
+
+<!-- 
 <div class="card mb-4" *ngFor="let blog of blogs">
     <div class="card-footer text-muted">
         {{blog.datePosted}} by
-        <a [routerLink]="['/blog', blog.id]" >{{blog.author}}</a>
+        <a [routerLink]="['/blog', blog.id]">{{blog.author}}</a>
     </div>
 
     <img class="card-img-top" src="{{blog.img}}" alt="Card image cap">
@@ -15,4 +32,4 @@
     </div>
 </div>
 
-<app-control-pagination></app-control-pagination>
+<app-control-pagination></app-control-pagination> -->

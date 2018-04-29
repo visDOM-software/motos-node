@@ -1,8 +1,12 @@
 <ul class="list-group">
   <li *ngFor="let blog of blogs" class="list-group-item">
-    <a [routerLink]="['/blog/edit', blog.id]">
-      <h4 class="list-group-item-heading">{{blog.title}}</h4>
-      <p class="list-group-item-text">{{blog.summary}}</p>
+    <a class="pull-left" [routerLink]="['/blog/edit', blog.id]">
+      {{blog.title}}
     </a>
+    <div class="btn-group pull-right" role="group" aria-label="...">
+        <button type="button" class="btn btn-primary">Eliminar</button>
+      </div>
+
+    <div class="clearfix"></div>
   </li>
 </ul>

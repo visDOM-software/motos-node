@@ -36,6 +36,30 @@ export class BlogService {
     img: "http://placehold.it/750x300",
     title: "prueba 1",
     author: "eaar89@gmail.com"
+  }, {
+    id: 4,
+    datePosted: "Posted on January 1",
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    img: "http://placehold.it/750x300",
+    title: "prueba 1",
+    author: "eaar89@gmail.com"
+  }, {
+    id: 4,
+    datePosted: "Posted on January 1",
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    img: "http://placehold.it/750x300",
+    title: "prueba 1",
+    author: "eaar89@gmail.com"
+  }, {
+    id: 4,
+    datePosted: "Posted on January 1",
+    content: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!",
+    summary: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+    img: "http://placehold.it/750x300",
+    title: "prueba 1",
+    author: "eaar89@gmail.com"
   }]
 
   constructor() { }
