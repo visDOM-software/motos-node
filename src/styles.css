@@ -1,4 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "assets/css/bootstrap.min.css";
+@import "assets/css/nice-select.css";
+@import "assets/css/animate.css";
+
+/* @import "assets/css/owl.carousel.min.css"; */
+
+@import "assets/css/magnific-popup.css";
+@import "assets/css/fontawesome-all.min.css";
+@import "assets/css/meanmenu.css";
+@import "assets/css/icofont.css";
+@import "assets/css/jquery-ui.css";
+@import "assets/css/default.css";
 @import "assets/css/style.css";
-@import "assets/css/forms.css";
+@import "assets/css/responsive.css";
