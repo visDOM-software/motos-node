@@ -1,4 +1,38 @@
-<div class="row">
+<input
+  id="typeahead-focus"
+  type="text"
+  class="form-control"
+  [(ngModel)]="model"
+  [ngbTypeahead]="search"
+  (selectItem)="getModels($event)"
+  (focus)="focus$.next($event.target.value)"
+  (click)="click$.next($event.target.value)"
+  #instance="ngbTypeahead"
+/>
+
+<div class="col-md-4">
+    <ul class="list-group">
+      <a class="list-group-item active">
+        Modelos
+      </a>
+
+      <div *ngIf="models == null; then modelShowMore else modelInfo"></div>
+
+      <ng-template #modelShowMore>
+        Seleccion marca y modelo para continuar
+      </ng-template>
+
+      <ng-template #modelInfo>
+        <a *ngFor="let model of models" (click)="getMoto(model.id)" class="list-group-item">
+          {{model.model}}
+        </a>
+      </ng-template>
+    </ul>
+  </div>
+
+
+
+<!-- <div class="row">
   <div class="col-md-4">
     <ul class="list-group">
       <a href="#" class="list-group-item active">
@@ -90,4 +124,4 @@
       </ng-template>
     </ul>
   </div>
-</div>
+</div> -->

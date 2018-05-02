@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider, } from "angular5-social-login";
 import { FormsModule } from '@angular/forms';
 import { LMarkdownEditorModule } from 'ngx-markdown-editor';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -70,7 +71,8 @@ export function getAuthServiceConfigs() {
     FormsModule,
     AppRoutingModule,
     SocialLoginModule,
-    LMarkdownEditorModule
+    LMarkdownEditorModule,
+    NgbModule.forRoot()
   ],
   providers: [
     BlogService,
