@@ -1,5 +1,68 @@
-<!-- Navigation -->
-<header id="header" class="container clearfix">
+<!-- Start Header Area -->
+<header class="header-area">
+    <div class="container">
+        <div class="main-menu">
+            <div class="row">
+                <div class="col-lg-3 d-flex align-items-center">
+                    <div class="logo">
+                        <a routerLink="/"><img src="./assets/img/logo/logo.png" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="basic-menu f-right">
+                        <nav id="mobile-menu">
+                            <ul>
+                                <li>
+                                    <a routerLink="compare-moto">COMPARATIVA</a>
+                                </li>
+                                <li>
+                                    <a routerLink="blog">BLOG <i class="icofont icofont-rounded-down"></i></a>
+                                    <ul>
+                                        <li>
+                                            <a routerLink="/blog/mine">Mis blogs</a>
+                                        </li>
+                                        <li>
+                                            <a routerLink="/blog/edit">Crear</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <div *ngIf="authorized;then logged else not_logged"></div>
+                                <ng-template #logged>
+                                    <li>
+                                        <a routerLink="rides">RODADAS <i class="icofont icofont-rounded-down"></i></a>
+                                        <ul>
+                                            <li><a routerLink="friends">Buscar acompañante</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a routerLink="user">{{ user.name }}
+                                                <i><img class="icon-user" src="{{ user.image }}"></i>
+                                            </a>
+                                        <ul>
+                                            <li><a routerLink="user">Mi perfil</a></li>
+                                            <li><a routerLink="expenses">Mis gastos</a></li>
+                                            <li><a (click)="signOut()">Cerrar sesión</a></li>
+                                        </ul>
+                                    </li>
+                                </ng-template>
+                                <ng-template #not_logged>
+                                    <li>
+                                        <a routerLink="login">Login</a>
+                                    </li>
+                                </ng-template>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-menu"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- End Header Area -->
+
+
+<!-- <header id="header" class="container clearfix">
     <a routerLink="/" id="logo">
         <img src="./assets/img/logo.png" alt="SmartStart">
     </a>
@@ -7,32 +70,7 @@
         <ul>
             <li class="current">
                 <a class="nav-link" routerLink="compare-moto" data-description="All starts here">Comparativa</a>
-                <!-- <ul>
-                    <li><a href="logos-slider.html">Logos Slider</a></li>
-                    <li><a href="photos-slider.html">Photos Slider</a></li>
-                </ul> -->
             </li>
-            <!-- <li>
-                <a class="nav-link" routerLink="user" data-description="All the different stuff">Usuario</a>
-                <ul>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="our-team.html">Our Team</a>
-                        <ul>
-                            <li><a href="we-are-hiring.html">We are hiring</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="elements.html">Elements</a></li>
-                    <li><a href="pricing-tables.html">Pricing Tables</a></li>
-                    <li><a href="columns.html">Columns</a></li>
-                    <li><a href="#">Third Level Item</a>
-                        <ul>
-                            <li><a href="#">This is a simple example</a></li>
-                            <li><a href="#">Of the third level</a></li>
-                            <li><a href="#">Navigation item</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li> -->
             <li>
                 <a class="nav-link" routerLink="blog" data-description="What we think">Blog</a>
                 <ul>
@@ -70,5 +108,4 @@
             </ng-template>
         </ul>
     </nav>
-    <!-- end #main-nav -->
-</header>
+</header> -->

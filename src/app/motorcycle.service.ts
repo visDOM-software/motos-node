@@ -13,10 +13,10 @@ export class MotorcycleService {
   }
 
   getModels(brand) {
-    return Array.from(new Set(this.motos.filter(x => x.fabricante == brand).map(x => ({ model: x.modelo, id: x.modelo }))));
+    return Array.from(new Set(this.motos.filter(x => x.fabricante == brand).map(x => ({ model: x.marcaModelo, id: x.id }))));
   }
 
   getMoto(id) {
-    return this.motos.find(x => x.modelo == id);
+    return this.motos.find(x => x.id == id);
   }
 }
