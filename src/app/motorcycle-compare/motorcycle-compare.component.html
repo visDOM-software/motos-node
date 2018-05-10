@@ -1,127 +1,81 @@
-<input
-  id="typeahead-focus"
-  type="text"
-  class="form-control"
-  [(ngModel)]="model"
-  [ngbTypeahead]="search"
-  (selectItem)="getModels($event)"
-  (focus)="focus$.next($event.target.value)"
-  (click)="click$.next($event.target.value)"
-  #instance="ngbTypeahead"
-/>
-
 <div class="col-md-4">
-    <ul class="list-group">
-      <a class="list-group-item active">
-        Modelos
-      </a>
-
-      <div *ngIf="models == null; then modelShowMore else modelInfo"></div>
-
-      <ng-template #modelShowMore>
-        Seleccion marca y modelo para continuar
-      </ng-template>
-
-      <ng-template #modelInfo>
-        <a *ngFor="let model of models" (click)="getMoto(model.id)" class="list-group-item">
-          {{model.model}}
-        </a>
-      </ng-template>
-    </ul>
-  </div>
+  <input id="typeahead-focus" 
+    type="text" 
+    class="form-control" 
+    [(ngModel)]="model" 
+    [ngbTypeahead]="thBrands" 
+    (selectItem)="getModels($event)"
+    (focus)="focus$.next($event.target.value)" 
+    (click)="click$.next($event.target.value)" 
+    #instance="ngbTypeahead" />
 
 
+  <ng-template #rt let-r="result" let-t="term">
+    {{ r.model}}
+  </ng-template>
 
-<!-- <div class="row">
-  <div class="col-md-4">
-    <ul class="list-group">
-      <a href="#" class="list-group-item active">
-        Marcas
-      </a>
-                <a *ngFor="let brand of brands" (click)="getModels(brand)" class="list-group-item">
-        {{brand}}
-      </a>
-            </ul>
-        </div>
+  <input id="typeahead-focus" 
+    type="text" 
+    class="form-control" 
+    [(ngModel)]="model2" 
+    [inputFormatter]="formatter" 
+    [ngbTypeahead]="thModels" 
+    [resultTemplate]="rt"
+    (selectItem)="getMoto($event)"
+    (focus)="focusModel$.next($event.target.value)" 
+    (click)="clickModel$.next($event.target.value)" 
+    #instance="ngbTypeahead"
+  />
 
-        <div class="col-md-4">
-            <ul class="list-group">
-                <a class="book-now-title">
-        Modelos
-      </a>
+  <div *ngIf="moto == null; then motoShowMore else motoInfo"></div>
 
-                <div *ngIf="models == null; then modelShowMore else modelInfo"></div>
+  <ng-template #motoShowMore>
+    Seleccion marca y modelo para continuar
+  </ng-template>
 
-                <ng-template #modelShowMore>
-                    Seleccion marca y modelo para continuar
-                </ng-template>
+  <ng-template #motoInfo>
+    <a class="list-group-item"> {{moto.alimentacion}} </a>
+    <a class="list-group-item"> {{moto.alturaAsiento}} </a>
+    <a class="list-group-item"> {{moto.alturaTotal}} </a>
+    <a class="list-group-item"> {{moto.anchuraMaxima}} </a>
+    <a class="list-group-item"> {{moto.anclajePinza}} </a>
+    <a class="list-group-item"> {{moto.anguloLanzamiento}} </a>
+    <a class="list-group-item"> {{moto.arranque}} </a>
+    <a class="list-group-item"> {{moto.avance}} </a>
+    <a class="list-group-item"> {{moto.basculante}} </a>
+    <a class="list-group-item"> {{moto.cambio}} </a>
+    <a class="list-group-item"> {{moto.capacidadDeposito}} </a>
+    <a class="list-group-item"> {{moto.chasis}} </a>
+    <a class="list-group-item"> {{moto.ciclos}} </a>
+    <a class="list-group-item"> {{moto.cilindrada}} </a>
+    <a class="list-group-item"> {{moto.cilindros}} </a>
+    <a class="list-group-item"> {{moto.configuracion}} </a>
+    <a class="list-group-item"> {{moto.diametroBarras}} </a>
+    <a class="list-group-item"> {{moto.diametroCarrera}} </a>
+    <a class="list-group-item"> {{moto.distanciaEjes}} </a>
+    <a class="list-group-item"> {{moto.distanciaTotal}} </a>
+    <a class="list-group-item"> {{moto.distribucion}} </a>
+    <a class="list-group-item"> {{moto.embrague}} </a>
+    <a class="list-group-item"> {{moto.fabricante}} </a>
+    <a class="list-group-item"> {{moto.frenoDelantero}} </a>
+    <a class="list-group-item"> {{moto.frenoTrasero}} </a>
+    <a class="list-group-item"> {{moto.modelo}} </a>
+    <a class="list-group-item"> {{moto.neumaticoDelantero}} </a>
+    <a class="list-group-item"> {{moto.neumaticoTrasero}} </a>
+    <a class="list-group-item"> {{moto.noPistones}} </a>
+    <a class="list-group-item"> {{moto.parMotor}} </a>
+    <a class="list-group-item"> {{moto.periodoComercializacion}} </a>
+    <a class="list-group-item"> {{moto.pesoMarcha}} </a>
+    <a class="list-group-item"> {{moto.pesoSeco}} </a>
+    <a class="list-group-item"> {{moto.potenciaMaxima}} </a>
+    <a class="list-group-item"> {{moto.recorridoDelantero}} </a>
+    <a class="list-group-item"> {{moto.recorridoTrasero}} </a>
+    <a class="list-group-item"> {{moto.refrigeracion}} </a>
+    <a class="list-group-item"> {{moto.reglajesDelantero}} </a>
+    <a class="list-group-item"> {{moto.reglajesTrasero}} </a>
+    <a class="list-group-item"> {{moto.suspencionDelantera}} </a>
+    <a class="list-group-item"> {{moto.suspencionTrasera}} </a>
+    <a class="list-group-item"> {{moto.valvulasCilindro}} </a>
 
-                <ng-template #modelInfo>
-                    <a *ngFor="let model of models" (click)="getMoto(model.id)" class="list-group-item">
-          {{model.model}}
-        </a>
-                </ng-template>
-            </ul>
-        </div>
-
-        <div class="col-md-4">
-            <ul class="list-group">
-                <a class="book-now-title">
-        Informacion
-      </a>
-
-                <div *ngIf="moto == null; then motoShowMore else motoInfo"></div>
-
-                <ng-template #motoShowMore>
-                    Seleccion marca y modelo para continuar
-                </ng-template>
-
-      <ng-template #motoInfo>
-          <a class="list-group-item"> {{moto.alimentacion}} </a>
-          <a class="list-group-item"> {{moto.alturaAsiento}} </a>
-          <a class="list-group-item"> {{moto.alturaTotal}} </a>
-          <a class="list-group-item"> {{moto.anchuraMaxima}} </a>
-          <a class="list-group-item"> {{moto.anclajePinza}} </a>
-          <a class="list-group-item"> {{moto.anguloLanzamiento}} </a>
-          <a class="list-group-item"> {{moto.arranque}} </a>
-          <a class="list-group-item"> {{moto.avance}} </a>
-          <a class="list-group-item"> {{moto.basculante}} </a>
-          <a class="list-group-item"> {{moto.cambio}} </a>
-          <a class="list-group-item"> {{moto.capacidadDeposito}} </a>
-          <a class="list-group-item"> {{moto.chasis}} </a>
-          <a class="list-group-item"> {{moto.ciclos}} </a>
-          <a class="list-group-item"> {{moto.cilindrada}} </a>
-          <a class="list-group-item"> {{moto.cilindros}} </a>
-          <a class="list-group-item"> {{moto.configuracion}} </a>
-          <a class="list-group-item"> {{moto.diametroBarras}} </a>
-          <a class="list-group-item"> {{moto.diametroCarrera}} </a>
-          <a class="list-group-item"> {{moto.distanciaEjes}} </a>
-          <a class="list-group-item"> {{moto.distanciaTotal}} </a>
-          <a class="list-group-item"> {{moto.distribucion}} </a>
-          <a class="list-group-item"> {{moto.embrague}} </a>
-          <a class="list-group-item"> {{moto.fabricante}} </a>
-          <a class="list-group-item"> {{moto.frenoDelantero}} </a>
-          <a class="list-group-item"> {{moto.frenoTrasero}} </a>
-          <a class="list-group-item"> {{moto.modelo}} </a>
-          <a class="list-group-item"> {{moto.neumaticoDelantero}} </a>
-          <a class="list-group-item"> {{moto.neumaticoTrasero}} </a>
-          <a class="list-group-item"> {{moto.noPistones}} </a>
-          <a class="list-group-item"> {{moto.parMotor}} </a>
-          <a class="list-group-item"> {{moto.periodoComercializacion}} </a>
-          <a class="list-group-item"> {{moto.pesoMarcha}} </a>
-          <a class="list-group-item"> {{moto.pesoSeco}} </a>
-          <a class="list-group-item"> {{moto.potenciaMaxima}} </a>
-          <a class="list-group-item"> {{moto.recorridoDelantero}} </a>
-          <a class="list-group-item"> {{moto.recorridoTrasero}} </a>
-          <a class="list-group-item"> {{moto.refrigeracion}} </a>
-          <a class="list-group-item"> {{moto.reglajesDelantero}} </a>
-          <a class="list-group-item"> {{moto.reglajesTrasero}} </a>
-          <a class="list-group-item"> {{moto.suspencionDelantera}} </a>
-          <a class="list-group-item"> {{moto.suspencionTrasera}} </a>
-          <a class="list-group-item"> {{moto.valvulasCilindro}} </a>
-          
-        <img src="{{moto.foto}}">
-      </ng-template>
-    </ul>
-  </div>
-</div> -->
+    <img src="{{moto.foto}}">
+  </ng-template>
