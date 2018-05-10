@@ -23,6 +23,7 @@ export class MotorcycleCompareComponent implements OnInit {
   models2: any[] = null;
   moto = null;
   model: any;
+  model2: any;
 
   constructor(private motorcycleService: MotorcycleService) { }
 
